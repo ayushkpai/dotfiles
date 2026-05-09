@@ -36,6 +36,8 @@
   $ brew install git
   ```
 
+## For Ruby on Rails
+
 - Install Ruby
 
   ```
