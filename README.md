@@ -28,4 +28,10 @@
 
 - Auto hide dock
 
-  Open Settings > "Desktop & Dock" > "Auto hide"
+  Open Settings > "Desktop & Dock" > "Enable Auto hide"
+
+- Install Git
+
+  ```
+  $ brew install git
+  ```
