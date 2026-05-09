@@ -58,6 +58,8 @@
   $ gem install rails -v 8.0.2 --no-document
   ```
 
+---
+
 - Git config
 
   ```
