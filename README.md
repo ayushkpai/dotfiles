@@ -36,6 +36,21 @@
   $ brew install git
   ```
 
+- Install Visual Studio Code
+
+  ```
+    $ brew install --cask visual-studio-code
+  ```
+
+- Git config
+
+  ```
+  $ git config --global user.name "Your name"
+  $ git config --global user.email yourname@example.com
+  $ git config --global core.autocrlf input
+  $ git config --global core.editor "code --wait"
+  ```
+
 ## For Ruby on Rails
 
 - Install Ruby
@@ -56,21 +71,4 @@
 
   ```
   $ gem install rails -v 8.0.2 --no-document
-  ```
-
----
-
-- Install Visual Studio Code
-
-  ```
-    $ brew install --cask visual-studio-code
-  ```
-
-- Git config
-
-  ```
-  $ git config --global user.name "Your name"
-  $ git config --global user.email yourname@example.com
-  $ git config --global core.autocrlf input
-  $ git config --global core.editor "code --wait"
   ```
