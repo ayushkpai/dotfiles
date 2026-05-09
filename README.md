@@ -40,18 +40,18 @@
 
   ```
   $ brew install rbenv
-  ```
-
-  ```
   $ rbenv init
   ```
 
-  $ Open a new terminal
+  Open a new terminal
 
   ```
   $ rbenv install 3.4.4
+  $ rbenv global 3.4.4
   ```
 
+- Install Rails
+
   ```
-  $ rbenv global 3.4.4
+  $ gem install rails -v 8.0.2 --no-document
   ```
