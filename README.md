@@ -57,3 +57,11 @@
   ```
   $ gem install rails -v 8.0.2 --no-document
   ```
+
+- Git config
+
+  ```
+  git config --global user.name "Your name"
+  git config --global user.email yourname@example.com
+  git config --global core.autocrlf input
+  ```
