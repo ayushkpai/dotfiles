@@ -35,3 +35,23 @@
   ```
   $ brew install git
   ```
+
+- Install Ruby
+
+  ```
+  $ brew install rbenv
+  ```
+
+  ```
+  $ rbenv init
+  ```
+
+  $ Open a new terminal
+
+  ```
+  $ rbenv install 3.4.4
+  ```
+
+  ```
+  $ rbenv global 3.4.4
+  ```
