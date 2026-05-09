@@ -1,0 +1,3 @@
+maximize = true
+quit-after-last-window-closed = true
+copy-on-select = clipboard
