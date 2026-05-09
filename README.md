@@ -17,11 +17,15 @@
 - Install Firefox
 
   ```
-  brew install --cask firefox
+  $ brew install --cask firefox
   ```
 
 - Install Ghostty
 
   ```
-  brew install --cask ghostty
+  $ brew install --cask ghostty
   ```
+
+- Auto hide dock
+
+  Open Settings > "Desktop & Dock" > "Auto hide"
