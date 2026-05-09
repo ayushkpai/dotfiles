@@ -19,3 +19,9 @@
   ```
   brew install --cask firefox
   ```
+
+- Install Ghostty
+
+  ```
+  brew install --cask ghostty
+  ```
