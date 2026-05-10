@@ -51,6 +51,13 @@
   $ git config --global core.editor "code --wait"
   ```
 
+- Ghostty config
+
+  ```
+  mkdir ~/.config
+  ln -s ~/src/dotfiles/ghostty ~/.config/ghostty
+  ```
+
 ## For Ruby on Rails
 
 - Install Ruby
