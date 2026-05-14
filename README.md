@@ -16,9 +16,13 @@
 
 - Install Firefox
 
+  You can install firefox or use a different browser you prefer
+
   ```
   $ brew install --cask firefox
   ```
+
+### Ghostty
 
 - Install Ghostty
 
@@ -26,20 +30,22 @@
   $ brew install --cask ghostty
   ```
 
-- Auto hide dock
+- Ghostty config
 
-  Open Settings > "Desktop & Dock" > "Enable Auto hide"
+  ```
+  $ mkdir ~/src
+  $ cd ~/src
+  $ git clone git@github.com:ayushkpai/dotfiles.git
+  $ mkdir ~/.config
+  $ ln -s ~/src/dotfiles/ghostty ~/.config/ghostty
+  ```
+
+### Git
 
 - Install Git
 
   ```
   $ brew install git
-  ```
-
-- Install Visual Studio Code
-
-  ```
-    $ brew install --cask visual-studio-code
   ```
 
 - Git config
@@ -48,17 +54,18 @@
   $ git config --global user.name "Your name"
   $ git config --global user.email yourname@example.com
   $ git config --global core.autocrlf input
-  $ git config --global core.editor "code --wait"
+  $ git config --global core.editor "<Your editor> in my case 'code --wait' install visual studio code(shown below) if you want to use this"
   ```
 
-- Ghostty config
+- Install Visual Studio Code
 
   ```
-  mkdir ~/.config
-  ln -s ~/src/dotfiles/ghostty ~/.config/ghostty
+  $ brew install --cask visual-studio-code
   ```
 
-## For Ruby on Rails
+### Ruby and Rails
+
+Install if you need
 
 - Install Ruby
 
