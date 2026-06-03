@@ -1,5 +1,7 @@
 # dotfiles
 
+You can install anything you want or skip it
+
 ## Mac setup
 
 - Open Terminal App
@@ -15,8 +17,6 @@
   ```
 
 - Install Firefox
-
-  You can install firefox or use a different browser you prefer
 
   ```
   brew install --cask firefox
@@ -47,6 +47,7 @@
   
   ```
   git clone git@github.com:ayushkpai/dotfiles.git
+  cd dotfiles
   ```
 
   if you don't have a ssh key follow the instructions in this [link](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
@@ -55,6 +56,7 @@
 
   ```
   git clone git@github.com:ayushkpai/dotfiles.git
+  cd dotfiles
   ```
 
   if you don't have a github account then just run
@@ -77,7 +79,7 @@
 
 - Install oh my zsh
 
-  You can install it if you want it makes what you wright easier to read
+  Makes what you wright easier to read
 
   ```
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -85,7 +87,7 @@
 
 - Add Syntax highlighting
 
-  Install if you want tells if what you type is valid
+  Tells if what you type is valid
 
   ```
   brew install zsh-syntax-highlighting
@@ -104,7 +106,7 @@
 
 - Git config
 
-  You need to do this step because these things will get used in your commits
+  You need to do this step because these things will be used in your commits
 
   ```
   git config --global user.name "Your name"
@@ -114,8 +116,6 @@
   ```
 
 ### Ruby and Rails
-
-Install if you need
 
 - Install Ruby
 
@@ -135,4 +135,32 @@ Install if you need
 
   ```
   gem install rails -v 8.0.2 --no-document
+  ```
+
+### Node.js and yarn
+
+- Install Node.js
+
+  ```
+  brew install node
+  ```
+
+- Install yarn
+
+  ```
+  brew install yarn
+  ```
+
+### Redis
+
+- Install redis
+  
+  ```
+  brew install redis
+  ```
+
+- Start redis server
+
+  ```
+  brew services restart redis
   ```
