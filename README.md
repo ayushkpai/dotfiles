@@ -28,6 +28,12 @@ You can install anything you want or skip it
   brew install --cask visual-studio-code
   ```
 
+- Create ssh key
+
+  Do this only if you have a github account
+
+  Follow the instructions in this [link](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+
 ### Ghostty
 
 - Install Ghostty
@@ -42,24 +48,17 @@ You can install anything you want or skip it
   mkdir ~/src
   cd ~/src
   ```
-
-  if you have a github account and a ssh key run
   
-  ```
-  git clone git@github.com:ayushkpai/dotfiles.git
-  cd dotfiles
-  ```
-
-  if you don't have a ssh key follow the instructions in this [link](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
-
-  then run
+  Make sure you have a ssh key
 
   ```
   git clone git@github.com:ayushkpai/dotfiles.git
   cd dotfiles
+  mkdir ~/.config
+  ln -s ~/src/dotfiles/ghostty ~/.config/ghostty
   ```
 
-  if you don't have a github account then just run
+  if you don't have a github account
 
   ```
   mkdir dotfiles
@@ -68,11 +67,6 @@ You can install anything you want or skip it
   cd ghostty
   echo maximize = true >> config
   echo copy-on-select = clipboard >> config
-  ```
-
-  after doing the following according to you then run
-
-  ```
   mkdir ~/.config
   ln -s ~/src/dotfiles/ghostty ~/.config/ghostty
   ```
@@ -112,7 +106,7 @@ You can install anything you want or skip it
   git config --global user.name "Your name"
   git config --global user.email yourname@example.com
   git config --global core.autocrlf input
-  git config --global core.editor "<Your editor> in my case 'code --wait' install visual studio code (shown above) if you want to use this"
+  git config --global core.editor "Your editor"
   ```
 
 ### Ruby and Rails
@@ -163,4 +157,25 @@ You can install anything you want or skip it
 
   ```
   brew services restart redis
+  ```
+
+### Python
+
+We are going to install python in uv
+
+- Install python in uv
+
+  ```
+  brew install uv
+  uv python install 3.14
+  uv python pin 3.14
+  ```
+
+Now in any python project you need to
+
+- Init and run
+
+  ```
+  uv init
+  uv run python <Your project>
   ```
