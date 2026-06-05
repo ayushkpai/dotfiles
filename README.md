@@ -133,29 +133,18 @@ You can install anything you want or skip it
 
 ### Node.js and yarn
 
-- Install Node.js
+- Install Node.js and yarn
 
   ```
-  brew install node
-  ```
-
-- Install yarn
-
-  ```
-  brew install yarn
+  brew install node yarn
   ```
 
 ### Redis
 
-- Install redis
+- Install redis and start server
   
   ```
   brew install redis
-  ```
-
-- Start redis server
-
-  ```
   brew services restart redis
   ```
 
