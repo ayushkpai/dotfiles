@@ -32,7 +32,7 @@ You can install anything you want or skip it
 
   Do this only if you have a github account
 
-  Follow the instructions in this [link](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+  Follow the instructions in [Github](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
 
 ### Ghostty
 
@@ -48,7 +48,7 @@ You can install anything you want or skip it
   mkdir ~/src
   cd ~/src
   ```
-  
+
   Make sure you have a ssh key
 
   ```
@@ -142,7 +142,7 @@ You can install anything you want or skip it
 ### Redis
 
 - Install redis and start server
-  
+
   ```
   brew install redis
   brew services restart redis
@@ -167,4 +167,23 @@ Now in any python project you need to
   ```
   uv init
   uv run python <Your project>
+  ```
+
+### Mysql
+
+- Install mysql and start
+
+  ```
+  brew install mysql
+  brew services start mysql
+  ```
+
+### Data base(db)
+
+- Install dbeaver
+
+  A good tool for db
+
+  ```
+  brew install --cask dbeaver-community
   ```
