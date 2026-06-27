@@ -88,6 +88,24 @@ You can install anything you want or skip it
   echo source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh >> ~/.zshrc
   ```
 
+- Add auto suggestions
+
+  ```
+  brew install zsh-autosuggestions
+  echo source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh >> ~/.zshrc
+  ```
+
+- Add substring search
+
+  This is a clean-room implementation of the [Fish shell](https://fishshell.com)'s history search
+  feature, where you can type in any part of any command from history and then
+  press chosen keys, such as the UP and DOWN arrows, to cycle through matches.
+
+  ```
+  brew install zsh-history-substring-search
+  echo source /opt/homebrew/share/zsh-history-substring-search/zsh-history-substring-search.zsh >> ~/.zshrc
+  ```
+
 ### Git
 
 - Install Git
