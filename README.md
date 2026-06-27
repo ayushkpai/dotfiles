@@ -149,12 +149,18 @@ You can install anything you want or skip it
   gem install rails -v 8.0.2 --no-document
   ```
 
-### Node.js and yarn
+### Node.js typescript and yarn
 
 - Install Node.js and yarn
 
   ```
   brew install node yarn
+  ```
+
+- Typescript
+
+  ```
+  sudo npm i -g typescript
   ```
 
 ### Redis
