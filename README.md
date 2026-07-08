@@ -193,6 +193,43 @@ Now in any python project you need to
   uv run python <Your project>
   ```
 
+### Pygame zero
+
+Make sure you have python installed
+
+- Install pygame
+
+  ```
+  uv python install 3.13
+  ```
+
+In any project you need to
+
+- Add pygame
+
+  ```
+  uv add pygame
+  uv add pgzero
+  ```
+
+- Change files
+
+  pyproject.toml - Add or replace this in the bottom
+
+  ```
+  requires-python = ">=3.13"
+  dependencies = [
+    "pgzero>=1.2.1",
+    "pygame>=2.6.1",
+  ]
+  ```
+
+  .python-version - Replace the verion line with
+
+  ```
+  3.13
+  ```
+
 ### Mysql
 
 - Install mysql and start
