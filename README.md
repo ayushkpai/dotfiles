@@ -197,20 +197,13 @@ Now in any python project you need to
 
 Make sure you have python installed
 
-- Install pygame
+- Install python 3.13 cause pygame is not there in 3.14
 
   ```
   uv python install 3.13
   ```
 
 In any project you need to
-
-- Add pygame
-
-  ```
-  uv add pygame
-  uv add pgzero
-  ```
 
 - Change files
 
@@ -228,6 +221,13 @@ In any project you need to
 
   ```
   3.13
+  ```
+
+- Add pygame
+
+  ```
+  uv add pygame
+  uv add pgzero
   ```
 
 ### Mysql
