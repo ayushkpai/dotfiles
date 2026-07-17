@@ -22,10 +22,18 @@ You can install anything you want or skip it
   brew install --cask firefox
   ```
 
-- Install Visual Studio Code
+- Install Tree Sitter
 
   ```
-  brew install --cask visual-studio-code
+  brew install tree-sitter-cli
+  ```
+
+- Install RipGrep
+
+  Fuzzy searching
+
+  ```
+  brew install ripgrep
   ```
 
 - Create ssh key
@@ -33,6 +41,38 @@ You can install anything you want or skip it
   Do this only if you have a github account
 
   Follow the instructions in [Github](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+
+### Editors
+
+- Visual Studio Code
+
+  ```
+  brew install --cask visual-studio-code
+  ```
+
+- Vim
+
+  Vim comes built in in mac
+
+  You can get it by running
+
+  ```
+  vim
+  ```
+
+- Neo Vim
+
+  Neo vim is a better version of vim
+
+  ```
+  brew install neovim
+  ```
+
+  You can get it by typing
+
+  ```
+  nvim
+  ```
 
 ### Ghostty
 
