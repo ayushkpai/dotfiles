@@ -54,7 +54,7 @@ You can install anything you want or skip it
 
   Vim comes built in in mac
 
-  You can get it by running
+  You can open it by running
 
   ```
   vim
@@ -68,7 +68,7 @@ You can install anything you want or skip it
   brew install neovim
   ```
 
-  You can get it by typing
+  You can open it by typing
 
   ```
   nvim
@@ -89,7 +89,7 @@ You can install anything you want or skip it
   cd ~/src
   ```
 
-  Make sure you have a ssh key
+  Make sure you have a ssh key it saves passwprds so you don always have to put your github username and password
 
   ```
   git clone git@github.com:ayushkpai/dotfiles.git
@@ -98,18 +98,19 @@ You can install anything you want or skip it
   ln -s ~/src/dotfiles/ghostty ~/.config/ghostty
   ```
 
-  if you don't have a github account
+  if you don't have a github account use the https version
 
   ```
-  mkdir dotfiles
+  git clone https://github.com/ayushkpai/dotfiles
   cd dotfiles
-  mkdir ghostty
-  cd ghostty
-  echo maximize = true >> config
-  echo copy-on-select = clipboard >> config
   mkdir ~/.config
   ln -s ~/src/dotfiles/ghostty ~/.config/ghostty
   ```
+
+  Now you will get:
+  - if you select something it will get copied
+  - window is maximized
+  - you have a black theme
 
 - Install oh my zsh
 
@@ -162,9 +163,9 @@ You can install anything you want or skip it
 
   ```
   git config --global user.name "Your name"
-  git config --global user.email yourname@example.com
+  git config --global user.email "yourname@example.com"
   git config --global core.autocrlf input
-  git config --global core.editor "Your editor"
+  git config --global core.editor "Your editor(if you dont do this it will take vim)"
   ```
 
 ### Ruby and Rails
