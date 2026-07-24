@@ -93,6 +93,7 @@
   - if you select something it will get copied
   - window is maximized
   - you have a black theme
+  - Your have a fat cursor that does not blink
 
 - Install oh my zsh
 
