@@ -1,7 +1,5 @@
 # dotfiles
 
-You can install anything you want or skip it
-
 ## Mac setup
 
 - Open Terminal App
@@ -22,12 +20,6 @@ You can install anything you want or skip it
   brew install --cask firefox
   ```
 
-- Install Tree Sitter
-
-  ```
-  brew install tree-sitter-cli
-  ```
-
 - Install RipGrep
 
   Fuzzy searching
@@ -42,37 +34,27 @@ You can install anything you want or skip it
 
   Follow the instructions in [Github](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
 
-### Editors
+### Visual Studio Code
 
-- Visual Studio Code
+- Install vscode
 
   ```
   brew install --cask visual-studio-code
   ```
 
-- Vim
+- Recomended extensions
 
-  Vim comes built in in mac
-
-  You can open it by running
-
-  ```
-  vim
-  ```
-
-- Neo Vim
-
-  Neo vim is a better version of vim
-
-  ```
-  brew install neovim
-  ```
-
-  You can open it by typing
-
-  ```
-  nvim
-  ```
+  - [Ayush Pai Theme](https://github.com/ayushkpai/ayush-pai-theme)
+  - C/C++
+  - Gitlens
+  - JavaScript and TypeScript nightly
+  - Pylance
+  - Python
+  - Python debugger
+  - Python envoirments
+  - Ruby lsp
+  - Tailwind css intellisense
+  - vscode-icons
 
 ### Ghostty
 
@@ -85,11 +67,11 @@ You can install anything you want or skip it
 - Ghostty config
 
   ```
-  mkdir ~/src
   cd ~/src
   ```
 
-  Make sure you have a ssh key it saves passwprds so you don always have to put your github username and password
+  If this gives a error run `mkdir ~/src`
+  - Make sure you have a ssh key it saves passwprds so you don always have to put your github username and password
 
   ```
   git clone git@github.com:ayushkpai/dotfiles.git
@@ -147,6 +129,54 @@ You can install anything you want or skip it
   echo source /opt/homebrew/share/zsh-history-substring-search/zsh-history-substring-search.zsh >> ~/.zshrc
   ```
 
+### Neo Vim
+
+Neo vim is a better version of vim
+
+- Install Neo Vim
+
+  ```
+  brew install neovim
+  ```
+
+- You can open it by typing
+
+  ```
+  nvim
+  ```
+
+- Neo Vim config
+
+  - Install Tree Sitter
+
+    ```
+    brew install tree-sitter-cli
+    ```
+
+  ```
+  cd ~/src
+  ```
+
+  If this gives a error run `mkdir ~/src`
+  - Make sure you have a ssh key it saves passwprds so you don always have to put your github username and password
+
+  ```
+  git clone git@github.com:ayushkpai/dotfiles.git
+  cd dotfiles
+  ln -s ~/src/dotfiles/nvim ~/.config/nvim
+  ```
+  If you get a error in the above or below command run `mkdir ~/.config`
+  if you don't have a github account use the https version
+
+  ```
+  git clone https://github.com/ayushkpai/dotfiles
+  cd dotfiles
+  ln -s ~/src/dotfiles/nvim ~/.config/nvim
+  ```
+
+  Now you will get:
+  - Your nvim theme
+
 ### Git
 
 - Install Git
@@ -165,7 +195,7 @@ You can install anything you want or skip it
   git config --global user.name "Your name"
   git config --global user.email "yourname@example.com"
   git config --global core.autocrlf input
-  git config --global core.editor "Your editor(if you dont do this it will take vim)"
+  git config --global core.editor "Your editor"
   ```
 
 ### Ruby and Rails
