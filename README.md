@@ -278,14 +278,10 @@ In any project you need to
 
 - Change files
 
-  pyproject.toml - Add or replace this in the bottom
+  pyproject.toml - Replace this in the bottom
 
   ```
   requires-python = ">=3.13"
-  dependencies = [
-    "pgzero>=1.2.1",
-    "pygame>=2.6.1",
-  ]
   ```
 
   .python-version - Replace the verion line with
