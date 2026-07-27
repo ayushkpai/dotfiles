@@ -55,6 +55,34 @@
   - Tailwind css intellisense
   - vscode-icons
 
+- Create a extension if you want
+
+  - Install generator
+
+    ```
+    npm install -g yo generator-code
+    ```
+
+  - Create extension
+
+    ```
+    yo code
+    ```
+
+    After creating package it by
+
+  - Install vsce
+
+    ```
+    npm install -g vsce
+    ```
+
+  - Package it
+
+    ```
+    vsce packge
+    ```
+
 ### Ghostty
 
 - Install Ghostty
