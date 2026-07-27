@@ -154,10 +154,10 @@ Neo vim is a better version of vim
   ln -s ~/src/dotfiles/nvim ~/.config/nvim
   ```
   If you get a error in the above or below command run `mkdir ~/.config`
-  if you don't have a github account use the https version
+  - If you don't have a github account use the https version
 
   ```
-  git clone git@github.com:ayushkpai/dotfiles.git ~/src/dotfiles
+  git clone https://github.com/ayushkpai/dotfiles.git ~/src/dotfiles
   ln -s ~/src/dotfiles/nvim ~/.config/nvim
   ```
 
