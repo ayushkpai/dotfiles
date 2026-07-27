@@ -66,16 +66,10 @@
 
 - Ghostty config
 
-  ```
-  cd ~/src
-  ```
-
-  If this gives a error run `mkdir ~/src`
-  - Make sure you have a ssh key it saves passwprds so you don always have to put your github username and password
+  Make sure you have a ssh key it saves passwprds so you don always have to put your github username and password
 
   ```
-  git clone git@github.com:ayushkpai/dotfiles.git
-  cd dotfiles
+  git clone git@github.com:ayushkpai/dotfiles.git ~/src/dotfiles
   mkdir ~/.config
   ln -s ~/src/dotfiles/ghostty ~/.config/ghostty
   ```
@@ -83,8 +77,7 @@
   if you don't have a github account use the https version
 
   ```
-  git clone https://github.com/ayushkpai/dotfiles
-  cd dotfiles
+  git clone git@github.com:ayushkpai/dotfiles.git ~/src/dotfiles
   mkdir ~/.config
   ln -s ~/src/dotfiles/ghostty ~/.config/ghostty
   ```
@@ -154,24 +147,17 @@ Neo vim is a better version of vim
     brew install tree-sitter-cli
     ```
 
-  ```
-  cd ~/src
-  ```
-
-  If this gives a error run `mkdir ~/src`
-  - Make sure you have a ssh key it saves passwprds so you don always have to put your github username and password
+  Make sure you have a ssh key it saves passwprds so you don always have to put your github username and password
 
   ```
-  git clone git@github.com:ayushkpai/dotfiles.git
-  cd dotfiles
+  git clone git@github.com:ayushkpai/dotfiles.git ~/src/dotfiles
   ln -s ~/src/dotfiles/nvim ~/.config/nvim
   ```
   If you get a error in the above or below command run `mkdir ~/.config`
   if you don't have a github account use the https version
 
   ```
-  git clone https://github.com/ayushkpai/dotfiles
-  cd dotfiles
+  git clone git@github.com:ayushkpai/dotfiles.git ~/src/dotfiles
   ln -s ~/src/dotfiles/nvim ~/.config/nvim
   ```
 
