@@ -77,7 +77,7 @@
   if you don't have a github account use the https version
 
   ```
-  git clone git@github.com:ayushkpai/dotfiles.git ~/src/dotfiles
+  git clone https://github.com/ayushkpai/dotfiles.git ~/src/dotfiles
   mkdir ~/.config
   ln -s ~/src/dotfiles/ghostty ~/.config/ghostty
   ```
