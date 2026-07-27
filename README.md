@@ -43,7 +43,6 @@
   ```
 
 - Recomended extensions
-
   - [Ayush Pai Theme](https://github.com/ayushkpai/ayush-pai-theme)
   - C/C++
   - Gitlens
@@ -140,7 +139,6 @@ Neo vim is a better version of vim
   ```
 
 - Neo Vim config
-
   - Install Tree Sitter
 
     ```
@@ -153,6 +151,7 @@ Neo vim is a better version of vim
   git clone git@github.com:ayushkpai/dotfiles.git ~/src/dotfiles
   ln -s ~/src/dotfiles/nvim ~/.config/nvim
   ```
+
   If you get a error in the above or below command run `mkdir ~/.config`
   - If you don't have a github account use the https version
 
@@ -251,6 +250,32 @@ Now in any python project you need to
   uv run python <Your project>
   ```
 
+- Package
+  - Add to pyproject.toml
+
+    ```
+    [project.scripts]
+    <your_command> = "<your_command>.code:main"
+    ```
+
+  - Add to end of your code and main.py
+
+    ```
+    if __name__ == "__main__":
+      main()
+    ```
+
+  - Project structure
+
+    src/<your_command>/code.py
+
+  - Package it
+
+    ```
+    uv tool install .
+    uv pip install -e .
+    ```
+
 ### Pygame zero
 
 Make sure you have python installed
@@ -264,18 +289,23 @@ Make sure you have python installed
 In any project you need to
 
 - Change files
+  - pyproject.toml - Replace this in the bottom
 
-  pyproject.toml - Replace this in the bottom
+    ```
+    requires-python = ">=3.14"
+    ```
 
-  ```
-  requires-python = ">=3.13"
-  ```
+    With
 
-  .python-version - Replace the verion line with
+    ```
+    requires-python = ">=3.13"
+    ```
 
-  ```
-  3.13
-  ```
+  - .python-version - Replace the verion line with
+
+    ```
+    3.13
+    ```
 
 - Add pygame
 
