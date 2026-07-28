@@ -2,7 +2,7 @@
 
 ## Mac setup
 
-- Open Terminal App
+- Open Terminal
 
   ```
   xcode-select --install
@@ -53,7 +53,8 @@
   - Python envoirments
   - Ruby lsp
   - Tailwind css intellisense
-  - vscode-icons
+  - vscode icons
+  - Prisma
 
 - Create a extension if you want
 
@@ -351,7 +352,7 @@ In any project you need to
   brew services start mysql
   ```
 
-### Data base(db)
+### Data base
 
 - Install dbeaver
 
