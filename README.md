@@ -276,7 +276,7 @@ Now in any python project you need to
 
   ```
   uv init
-  uv run python <Your project>
+  uv run <Your project>
   ```
 
 - Package
