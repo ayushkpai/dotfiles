@@ -47,6 +47,8 @@
   - C/C++
   - Gitlens
   - JavaScript and TypeScript nightly
+  - Prettier
+  - Prisma
   - Pylance
   - Python
   - Python debugger
@@ -54,7 +56,6 @@
   - Ruby lsp
   - Tailwind css intellisense
   - vscode icons
-  - Prisma
 
 - Create a extension if you want
 
