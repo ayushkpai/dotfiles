@@ -110,13 +110,25 @@
 - Yarn `brew install yarn`
 - Typescript compiler `sudo npm i -g typescript`
 - dbeaver `brew install --cask dbeaver-community`
-
 - Redis
 
   ```
   brew install redis
   brew services restart redis
   ```
+
+- Mysql
+
+  ```
+  brew install mysql
+  brew services start mysql
+  ```
+
+- Create vscode extension
+  - vscode extension generator `npm install -g yo generator-code`
+  - vscode extension packager `npm install -g vsce`
+  - Create extension `yo code`
+  - Package `vsce package`
 
 ### Python
 
@@ -175,18 +187,3 @@
   uv add pygame
   uv add pgzero
   ```
-
----
-
-- Mysql
-
-  ```
-  brew install mysql
-  brew services start mysql
-  ```
-
-- Create vscode extension
-  - vscode extension generator `npm install -g yo generator-code`
-  - vscode extension packager `npm install -g vsce`
-  - Create extension `yo code`
-  - Package `vsce package`
