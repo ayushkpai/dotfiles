@@ -1,48 +1,22 @@
 # dotfiles
 
-## Mac setup
+## Required
 
-- Open Terminal
+- xcode `xcode-select --install`
+- Homebrew `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
 
-  ```
-  xcode-select --install
-  ```
+---
 
-- Install Homebrew
+## Recomended
 
-  ```
-  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-  ```
-
-- Install Firefox
-
-  ```
-  brew install --cask firefox
-  ```
-
-- Install RipGrep
-
-  Fuzzy searching
-
-  ```
-  brew install ripgrep
-  ```
-
-- Create ssh key
-
-  Do this only if you have a github account
-
-  Follow the instructions in [Github](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+- Firefox `brew install --cask firefox`
+- RipGrep `brew install ripgrep`
+- Github ssh key. Follow the instructions in [Github](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
 
 ### Visual Studio Code
 
-- Install vscode
-
-  ```
-  brew install --cask visual-studio-code
-  ```
-
-- Recomended extensions
+- vscode `brew install --cask visual-studio-code`
+- vscode recomended extensions
   - [Ayush Pai Theme](https://github.com/ayushkpai/ayush-pai-theme)
   - C/C++
   - Gitlens
@@ -57,45 +31,10 @@
   - Tailwind css intellisense
   - vscode icons
 
-- Create a extension if you want
-
-  - Install generator
-
-    ```
-    npm install -g yo generator-code
-    ```
-
-  - Create extension
-
-    ```
-    yo code
-    ```
-
-    After creating package it by
-
-  - Install vsce
-
-    ```
-    npm install -g vsce
-    ```
-
-  - Package it
-
-    ```
-    vsce packge
-    ```
-
 ### Ghostty
 
-- Install Ghostty
-
-  ```
-  brew install --cask ghostty
-  ```
-
+- Ghostty `brew install --cask ghostty`
 - Ghostty config
-
-  Make sure you have a ssh key it saves passwprds so you don always have to put your github username and password
 
   ```
   git clone git@github.com:ayushkpai/dotfiles.git ~/src/dotfiles
@@ -103,109 +42,45 @@
   ln -s ~/src/dotfiles/ghostty ~/.config/ghostty
   ```
 
-  if you don't have a github account use the https version
-
-  ```
-  git clone https://github.com/ayushkpai/dotfiles.git ~/src/dotfiles
-  mkdir ~/.config
-  ln -s ~/src/dotfiles/ghostty ~/.config/ghostty
-  ```
-
-  Now you will get:
-  - if you select something it will get copied
-  - window is maximized
-  - you have a black theme
-  - Your have a fat cursor that does not blink
-
-- Install oh my zsh
-
-  Makes what you wright easier to read
-
-  ```
-  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-  ```
-
-- Add Syntax highlighting
-
-  Tells if what you type is valid
+- oh my zsh `sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`
+- Syntax highlighting
 
   ```
   brew install zsh-syntax-highlighting
   echo source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh >> ~/.zshrc
   ```
 
-- Add auto suggestions
+- Auto suggestions
 
   ```
   brew install zsh-autosuggestions
   echo source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh >> ~/.zshrc
   ```
 
-- Add substring search
-
-  This is a clean-room implementation of the [Fish shell](https://fishshell.com)'s history search
-  feature, where you can type in any part of any command from history and then
-  press chosen keys, such as the UP and DOWN arrows, to cycle through matches.
+- Substring search
 
   ```
   brew install zsh-history-substring-search
   echo source /opt/homebrew/share/zsh-history-substring-search/zsh-history-substring-search.zsh >> ~/.zshrc
   ```
 
+- Bat `brew install bat`
+
 ### Neo Vim
 
-Neo vim is a better version of vim
-
-- Install Neo Vim
-
-  ```
-  brew install neovim
-  ```
-
-- You can open it by typing
-
-  ```
-  nvim
-  ```
-
+- Neo Vim `brew install neovim`
 - Neo Vim config
-  - Install Tree Sitter
-
-    ```
-    brew install tree-sitter-cli
-    ```
-
-  Make sure you have a ssh key it saves passwprds so you don always have to put your github username and password
+  - Tree Sitter `brew install tree-sitter-cli`
 
   ```
   git clone git@github.com:ayushkpai/dotfiles.git ~/src/dotfiles
   ln -s ~/src/dotfiles/nvim ~/.config/nvim
   ```
 
-  If you get a error in the above or below command run `mkdir ~/.config`
-  - If you don't have a github account use the https version
-
-  ```
-  git clone https://github.com/ayushkpai/dotfiles.git ~/src/dotfiles
-  ln -s ~/src/dotfiles/nvim ~/.config/nvim
-  ```
-
-  Now you will get:
-  - Your nvim theme
-
 ### Git
 
-- Install Git
-
-  There is a version in mac itself but we want to use the latest version
-
-  ```
-  brew install git
-  ```
-
+- Git `brew install git`
 - Git config
-
-  You need to do this step because these things will be used in your commits
 
   ```
   git config --global user.name "Your name"
@@ -214,9 +89,9 @@ Neo vim is a better version of vim
   git config --global core.editor "Your editor"
   ```
 
-### Ruby and Rails
+---
 
-- Install Ruby
+- Ruby
 
   ```
   brew install rbenv
@@ -230,29 +105,13 @@ Neo vim is a better version of vim
   rbenv global 3.4.4
   ```
 
-- Install Rails
+- Rails `gem install rails -v 8.0.2 --no-document`
+- Node.js `brew install node`
+- Yarn `brew install yarn`
+- Typescript compiler `sudo npm i -g typescript`
+- dbeaver `brew install --cask dbeaver-community`
 
-  ```
-  gem install rails -v 8.0.2 --no-document
-  ```
-
-### Node.js typescript and yarn
-
-- Install Node.js and yarn
-
-  ```
-  brew install node yarn
-  ```
-
-- Typescript
-
-  ```
-  sudo npm i -g typescript
-  ```
-
-### Redis
-
-- Install redis and start server
+- Redis
 
   ```
   brew install redis
@@ -261,9 +120,7 @@ Neo vim is a better version of vim
 
 ### Python
 
-We are going to install python in uv
-
-- Install python in uv
+- Python
 
   ```
   brew install uv
@@ -271,16 +128,7 @@ We are going to install python in uv
   uv python pin 3.14
   ```
 
-Now in any python project you need to
-
-- Init and run
-
-  ```
-  uv init
-  uv run <Your project>
-  ```
-
-- Package
+- Python package
   - Add to pyproject.toml
 
     ```
@@ -306,36 +154,20 @@ Now in any python project you need to
     uv pip install -e .
     ```
 
-### Pygame zero
+### Pygame
 
-Make sure you have python installed
-
-- Install python 3.13 cause pygame is not there in 3.14
+- Python 3.13 `uv python install 3.13`
+- pyproject.toml
 
   ```
-  uv python install 3.13
+  requires-python = ">=3.13"
   ```
 
-In any project you need to
+- .python-version
 
-- Change files
-  - pyproject.toml - Replace this in the bottom
-
-    ```
-    requires-python = ">=3.14"
-    ```
-
-    With
-
-    ```
-    requires-python = ">=3.13"
-    ```
-
-  - .python-version - Replace the verion line with
-
-    ```
-    3.13
-    ```
+  ```
+  3.13
+  ```
 
 - Add pygame
 
@@ -344,21 +176,17 @@ In any project you need to
   uv add pgzero
   ```
 
-### Mysql
+---
 
-- Install mysql and start
+- Mysql
 
   ```
   brew install mysql
   brew services start mysql
   ```
 
-### Data base
-
-- Install dbeaver
-
-  A good tool for db
-
-  ```
-  brew install --cask dbeaver-community
-  ```
+- Create vscode extension
+  - vscode extension generator `npm install -g yo generator-code`
+  - vscode extension packager `npm install -g vsce`
+  - Create extension `yo code`
+  - Package `vsce package`
