@@ -1,4 +1,6 @@
 maximize = true
+mouse-hide-while-typing
+quit-after-last-window-closed = true
 copy-on-select = clipboard
 cursor-style = block
 cursor-style-blink = false
