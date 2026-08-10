@@ -65,6 +65,7 @@
   ```
 
 - Bat `brew install bat`
+- Tree `brew install tree`
 
 ### Neo Vim
 
