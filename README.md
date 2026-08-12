@@ -88,6 +88,8 @@
   git config --global user.email "yourname@example.com"
   git config --global core.autocrlf input
   git config --global core.editor "Your editor"
+  ln -s ~/src/dotfiles/gitignore_global ~/.gitignore_global
+  git config --global core.excludesfile ~/.gitignore_global
   ```
 
 ---
