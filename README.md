@@ -11,7 +11,6 @@
 
 - Firefox `brew install --cask firefox`
 - RipGrep `brew install ripgrep`
-- Github ssh key. Follow the instructions in [Github](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
 
 ### Visual Studio Code
 
@@ -90,6 +89,16 @@
   git config --global core.editor "Your editor"
   ln -s ~/src/dotfiles/gitignore_global ~/.gitignore_global
   git config --global core.excludesfile ~/.gitignore_global
+  ```
+
+### GitHub
+
+- Github ssh key. Follow the instructions in [Github](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+- Github Cli
+
+  ```
+  brew install gh
+  gh auth login
   ```
 
 ---
