@@ -1,13 +1,7 @@
 # dotfiles
 
-- xcode `xcode-select --install`
-- Homebrew `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
-- Firefox `brew install --cask firefox`
-- RipGrep `brew install ripgrep`
+- Configure here after installing in my [ignite](https://github.com/ayushkpai/ignite)
 
-### Visual Studio Code
-
-- vscode `brew install --cask visual-studio-code`
 - vscode recomended extensions
   - [Ayush Pai Theme](https://github.com/ayushkpai/ayush-pai-theme)
   - C/C++
@@ -15,62 +9,35 @@
   - JavaScript and TypeScript nightly
   - Prettier
   - Prisma
-  - Pylance
   - Python
-  - Python debugger
-  - Python envoirments
   - Ruby lsp
   - Tailwind css intellisense
 
-### Ghostty
-
-- Ghostty `brew install --cask ghostty`
 - Ghostty config `ln -s ~/src/dotfiles/ghostty ~/.config/ghostty`
 - oh my zsh `sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`
-- Syntax highlighting `brew install zsh-syntax-highlighting`
-- Auto suggestions `brew install zsh-autosuggestions`
-- Substring search `brew install zsh-history-substring-search`
-- Bat `brew install bat`
-- Tree `brew install tree`
-- Tree Sitter `brew install tree-sitter-cli`
 - Zshrc `ln -s ln -s ~/src/dotfiles/zshrc ~/.zshrc`
-
-### Neo Vim
-
-- Neo Vim `brew install neovim`
 - Neo Vim config `ln -s ~/src/dotfiles/nvim ~/.config/nvim`
-
-### Git
-
-- Git `brew install git`
 - Git config
 
   ```
   git config --global user.name "Your name"
   git config --global user.email "yourname@example.com"
   git config --global core.autocrlf input
-  git config --global core.editor "Your editor"
   ln -s ~/src/dotfiles/gitignore_global ~/.gitignore_global
   git config --global core.excludesfile ~/.gitignore_global
   ```
-
-### GitHub
 
 - Github ssh key. Follow the instructions in [Github](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
 - Github Cli
 
   ```
-  brew install gh
   gh auth login
   gh config set editor "vim"
   ```
 
----
-
 - Ruby
 
   ```
-  brew install rbenv
   rbenv init
   ```
 
@@ -82,49 +49,33 @@
   ```
 
 - Rails `gem install rails -v 8.0.2 --no-document`
-- Node.js `brew install node`
-- Yarn `brew install yarn`
 - Typescript compiler `sudo npm i -g typescript`
-- dbeaver `brew install --cask dbeaver-community`
-- Redis
-
-  ```
-  brew install redis
-  brew services restart redis
-  ```
-
-- Mysql
-
-  ```
-  brew install mysql
-  brew services start mysql
-  ```
-
+- Redis `brew services restart redis`
+- Mysql `brew services start mysql`
 - Create vscode extension
   - vscode extension generator `npm install -g yo generator-code`
   - vscode extension packager `npm install -g vsce`
   - Create extension `yo code`
   - Package `vsce package`
 
-### Python
-
 - Python
 
   ```
-  brew install uv
   uv python install 3.14
-  uv python pin 3.14
+  uv python install 3.13
   ```
 
+## Bonus Section - Python Docs
+
 - Python package
-  - Add to pyproject.toml
+  - pyproject.toml
 
     ```
     [project.scripts]
     <your_command> = "<your_command>.code:main"
     ```
 
-  - Add to end of your code and main.py
+  - code and main.py
 
     ```
     if __name__ == "__main__":
@@ -142,24 +93,12 @@
     uv pip install -e .
     ```
 
-### Pygame
+- Pygame
+  - pyproject.toml `requires-python = ">=3.13"`
+  - .python-version `3.13`
+  - Add pygame
 
-- Python 3.13 `uv python install 3.13`
-- pyproject.toml
-
-  ```
-  requires-python = ">=3.13"
-  ```
-
-- .python-version
-
-  ```
-  3.13
-  ```
-
-- Add pygame
-
-  ```
-  uv add pygame
-  uv add pgzero
-  ```
+    ```
+    uv add pygame
+    uv add pgzero
+    ```
