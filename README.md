@@ -99,6 +99,7 @@
   ```
   brew install gh
   gh auth login
+  gh config set editor "vim"
   ```
 
 ---
