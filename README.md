@@ -1,14 +1,7 @@
 # dotfiles
 
-## Required
-
 - xcode `xcode-select --install`
 - Homebrew `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
-
----
-
-## Recomended
-
 - Firefox `brew install --cask firefox`
 - RipGrep `brew install ripgrep`
 
@@ -33,49 +26,20 @@
 ### Ghostty
 
 - Ghostty `brew install --cask ghostty`
-- Ghostty config
-
-  ```
-  git clone git@github.com:ayushkpai/dotfiles.git ~/src/dotfiles
-  mkdir ~/.config
-  ln -s ~/src/dotfiles/ghostty ~/.config/ghostty
-  ```
-
+- Ghostty config `ln -s ~/src/dotfiles/ghostty ~/.config/ghostty`
 - oh my zsh `sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`
-- Syntax highlighting
-
-  ```
-  brew install zsh-syntax-highlighting
-  echo source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh >> ~/.zshrc
-  ```
-
-- Auto suggestions
-
-  ```
-  brew install zsh-autosuggestions
-  echo source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh >> ~/.zshrc
-  ```
-
-- Substring search
-
-  ```
-  brew install zsh-history-substring-search
-  echo source /opt/homebrew/share/zsh-history-substring-search/zsh-history-substring-search.zsh >> ~/.zshrc
-  ```
-
+- Syntax highlighting `brew install zsh-syntax-highlighting`
+- Auto suggestions `brew install zsh-autosuggestions`
+- Substring search `brew install zsh-history-substring-search`
 - Bat `brew install bat`
 - Tree `brew install tree`
+- Tree Sitter `brew install tree-sitter-cli`
+- Zshrc `ln -s ln -s ~/src/dotfiles/zshrc ~/.zshrc`
 
 ### Neo Vim
 
 - Neo Vim `brew install neovim`
-- Neo Vim config
-  - Tree Sitter `brew install tree-sitter-cli`
-
-  ```
-  git clone git@github.com:ayushkpai/dotfiles.git ~/src/dotfiles
-  ln -s ~/src/dotfiles/nvim ~/.config/nvim
-  ```
+- Neo Vim config `ln -s ~/src/dotfiles/nvim ~/.config/nvim`
 
 ### Git
 
