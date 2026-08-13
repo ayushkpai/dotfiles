@@ -21,7 +21,6 @@
   - Python envoirments
   - Ruby lsp
   - Tailwind css intellisense
-  - vscode icons
 
 ### Ghostty
 
