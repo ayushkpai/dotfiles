@@ -14,7 +14,7 @@
   - Tailwind css intellisense
 
 - Ghostty config `ln -s ~/src/dotfiles/ghostty ~/.config/ghostty`
-- oh my zsh `sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`
+- Oh My Zsh `sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`
 - Zshrc `ln -s ln -s ~/src/dotfiles/zshrc ~/.zshrc`
 - Neo Vim config `ln -s ~/src/dotfiles/nvim ~/.config/nvim`
 - Git config
