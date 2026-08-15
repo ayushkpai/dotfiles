@@ -100,6 +100,12 @@
   uv python install 3.13
   ```
 
+- Arduino
+
+  ```
+  softwareupdate --install-rosetta
+  ```
+
 ## Bonus Section
 
 - Create vscode extension
