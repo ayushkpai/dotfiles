@@ -13,10 +13,30 @@
   - Ruby lsp
   - Tailwind css intellisense
 
-- Ghostty config `ln -s ~/src/dotfiles/ghostty ~/.config/ghostty`
-- Oh My Zsh `sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`
-- Zshrc `ln -s ~/src/dotfiles/zshrc ~/.zshrc`
-- Neo Vim config `ln -s ~/src/dotfiles/nvim ~/.config/nvim`
+- Ghostty config 
+  
+  ```
+  ln -s ~/src/dotfiles/ghostty ~/.config/ghostty
+  ```
+
+- Oh My Zsh 
+  
+  ```
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+  ```
+
+- Zshrc 
+  
+  ```
+  ln -s ~/src/dotfiles/zshrc ~/.zshrc
+  ```
+
+- Neo Vim config 
+  
+  ```
+  ln -s ~/src/dotfiles/nvim ~/.config/nvim
+  ```
+
 - Git config
 
   ```
@@ -48,15 +68,30 @@
   rbenv global 3.4.4
   ```
 
-- Rails `gem install rails -v 8.0.2 --no-document`
-- Typescript compiler `sudo npm i -g typescript`
-- Redis `brew services restart redis`
-- Mysql `brew services start mysql`
-- Create vscode extension
-  - vscode extension generator `npm install -g yo generator-code`
-  - vscode extension packager `npm install -g vsce`
-  - Create extension `yo code`
-  - Package `vsce package`
+- Rails 
+  
+  ```
+  gem install rails -v 8.0.2 --no-document
+  ```
+
+- Typescript compiler 
+  
+  ```
+  sudo npm i -g typescript
+  ```
+
+- Redis 
+
+  ```
+  brew services restart redis
+  ```
+
+- Mysql 
+  
+  ```
+  brew services start mysql
+  ```
+
 
 - Python
 
@@ -65,7 +100,31 @@
   uv python install 3.13
   ```
 
-## Bonus Section - Python Docs
+## Bonus Section
+
+- Create vscode extension
+  - vscode extension generator 
+  
+    ```
+    npm install -g yo generator-code
+    ```
+  - vscode extension packager 
+    
+    ```
+    npm install -g vsce
+    ```
+
+  - Create extension 
+    
+    ```
+    yo code
+    ```
+
+  - Package 
+  
+    ```
+    vsce package
+    ```
 
 - Python package
   - pyproject.toml
@@ -94,8 +153,18 @@
     ```
 
 - Pygame
-  - pyproject.toml `requires-python = ">=3.13"`
-  - .python-version `3.13`
+  - pyproject.toml 
+  
+    ```
+    requires-python = ">=3.13"
+    ```
+
+  - .python-version 
+    
+    ```
+    3.13
+    ```
+    
   - Add pygame
 
     ```
