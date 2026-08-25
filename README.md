@@ -64,14 +64,14 @@
   Open a new terminal
 
   ```
-  rbenv install 3.4.4
-  rbenv global 3.4.4
+  rbenv install 4.0.6
+  rbenv global 4.0.6
   ```
 
 - Rails 
   
   ```
-  gem install rails -v 8.0.2 --no-document
+  gem install rails --no-document
   ```
 
 - Typescript compiler 
