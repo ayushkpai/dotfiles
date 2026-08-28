@@ -106,6 +106,13 @@
   softwareupdate --install-rosetta
   ```
 
+- Java
+
+    ```
+    brew install openjdk
+    sudo ln -sfn /opt/homebrew/opt/openjdk/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk
+    ```
+
 ## Bonus Section
 
 - Create vscode extension
