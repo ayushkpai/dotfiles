@@ -1,2 +1,2 @@
 require("ap.remap")
-require("ap.copytoclipboard")
+require("ap.options")
