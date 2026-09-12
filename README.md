@@ -37,6 +37,12 @@
   ln -s ~/src/dotfiles/nvim ~/.config/nvim
   ```
 
+- Opencode config 
+  
+  ```
+  ln -s ~/src/dotfiles/opencode ~/.config/opencode
+  ```
+
 - Git config
 
   ```
