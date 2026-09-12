@@ -38,7 +38,7 @@
   ```
 
 - Opencode config 
-  
+
   ```
   ln -s ~/src/dotfiles/opencode ~/.config/opencode
   ```
