@@ -70,8 +70,8 @@
   Open a new terminal
 
   ```
-  rbenv install 4.0.6
-  rbenv global 4.0.6
+  rbenv install 4.0.7
+  rbenv global 4.0.7
   ```
 
 - Rails 
