@@ -121,10 +121,9 @@
 - nvm
 
     ```
-    mkdir -p ~/.nvm
-    nvm install 22
-    nvm use 22
-    nvm alias default 22
+    nvm install 26
+    nvm use 26
+    nvm alias default 26
     ```
 
 ## Bonus Section
