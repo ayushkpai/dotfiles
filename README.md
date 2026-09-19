@@ -53,8 +53,8 @@
   git config --global core.excludesfile ~/.gitignore_global
   ```
 
-- Github ssh key. Follow the instructions in [Github](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
-- Github Cli
+- GitHub ssh key. Follow the instructions in [GitHub](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+- GitHub Cli
 
   ```
   gh auth login
