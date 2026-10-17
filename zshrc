@@ -1,4 +1,8 @@
-printf 'Hello, %s\n' "$(whoami)"
+printf '\nHello, %s. Press any key to start' "$(whoami)"
+stty -echo
+read -k 1
+stty echo
+printf '\n'
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
