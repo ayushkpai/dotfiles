@@ -1,4 +1,10 @@
-printf '\nHello, %s. Press any key to start' "$(whoami)"
+case "$(date +%H)" in
+  (0[5-9]|1[01]) greeting="Good morning" ;;
+  (1[2-6])       greeting="Good afternoon" ;;
+  (1[7-9]|2[01]) greeting="Good evening" ;;
+  (*)            greeting="Good night" ;;
+esac
+printf '\n%s, %s. Press any key to start' "$greeting" "$(whoami)"
 stty -echo
 read -k 1
 stty echo
