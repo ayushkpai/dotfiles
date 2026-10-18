@@ -4,7 +4,7 @@ case "$(date +%H)" in
   (1[7-9]|2[01]) greeting="Good evening" ;;
   (*)            greeting="Good night" ;;
 esac
-printf '\n%s, %s. Press any key to start' "$greeting" "$(whoami)"
+printf '\n%s, %s' "$greeting" "$(whoami)"
 stty -echo
 read -k 1
 stty echo
