@@ -4,11 +4,20 @@ case "$(date +%H)" in
   (1[7-9]|2[01]) greeting="Good evening" ;;
   (*)            greeting="Good night" ;;
 esac
-printf '\n%s, %s' "$greeting" "$(whoami)"
+name="$(whoami)"
+label="$greeting, "
+bar=""
+for ((i=0; i<${#label}+${#name}+4; i++)); do bar+="─"; done
+printf '\n  ╭%s╮\n  │  ' "$bar"
+printf '\033[1m'
+for ((i=1; i<=${#label}; i++)); do printf '%s' "${label[$i]}"; sleep 0.03; done
+printf '\033[38;5;141m'
+for ((i=1; i<=${#name}; i++)); do printf '%s' "${name[$i]}"; sleep 0.03; done
+printf '\033[0m  │\n'
+printf '  ╰%s╯\n' "$bar"
 stty -echo
 read -k 1
 stty echo
-printf '\n'
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
