@@ -15,9 +15,6 @@ printf '\033[38;5;141m'
 for ((i=1; i<=${#name}; i++)); do printf '%s' "${name[$i]}"; sleep 0.03; done
 printf '\033[0m  │\n'
 printf '  ╰%s╯\n' "$bar"
-stty -echo
-read -k 1
-stty echo
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
