@@ -312,19 +312,40 @@ local function handle(client, data)
   return respond(client, "404 Not Found", "text/plain; charset=utf-8", "not found")
 end
 
+local preferred_port = 8642
+local port_attempts = 20
+
+local function open_server()
+  for port = preferred_port, preferred_port + port_attempts - 1 do
+    local server = uv.new_tcp()
+    if server then
+      if server:bind("127.0.0.1", port) then
+        return server, port
+      end
+      server:close()
+    end
+  end
+
+  local server = uv.new_tcp()
+  if not server then
+    return nil, nil, "could not create preview server"
+  end
+  if not server:bind("127.0.0.1", 0) then
+    server:close()
+    return nil, nil, "could not bind preview server"
+  end
+  return server, server:getsockname().port
+end
+
 local function start_server()
   if state.server then
     return state.port
   end
 
-  local server = assert(uv.new_tcp())
-  local ok, err = server:bind("127.0.0.1", 0)
-  if not ok then
-    server:close()
-    error("could not bind preview server: " .. tostring(err))
+  local server, port, bind_err = open_server()
+  if not server then
+    error(bind_err)
   end
-
-  local sock = server:getsockname()
 
   server:listen(128, function(listen_err)
     if listen_err then
@@ -363,8 +384,8 @@ local function start_server()
   end)
 
   state.server = server
-  state.port = sock.port
-  return sock.port
+  state.port = port
+  return port
 end
 
 local function stop_server()
