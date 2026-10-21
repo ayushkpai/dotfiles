@@ -420,14 +420,17 @@ function M.open()
   end
 end
 
+function M.toggle()
+  if state.server then
+    stop_server()
+    vim.notify("Markdown preview: stopped")
+    return
+  end
+  M.open()
+end
+
 function M.setup()
-  vim.api.nvim_create_user_command("MarkdownPreview", M.open, {
-    desc = "Open a live GitHub-style Markdown preview in the browser",
-  })
-  vim.api.nvim_create_user_command("MarkdownPreviewStop", stop_server, {
-    desc = "Stop the Markdown preview server",
-  })
-  vim.keymap.set("n", "<leader>mp", M.open, { desc = "[M]arkdown [P]review" })
+  vim.keymap.set("n", "<leader>mp", M.toggle, { desc = "[M]arkdown [P]review toggle" })
   vim.api.nvim_create_autocmd("VimLeavePre", { callback = stop_server })
 end
 
