@@ -420,10 +420,24 @@ function M.open()
   end
 end
 
+local function is_markdown(buf)
+  local filetype = vim.bo[buf].filetype
+  if filetype == "markdown" or filetype == "mdx" then
+    return true
+  end
+  local name = vim.api.nvim_buf_get_name(buf):lower()
+  return name:match("%.md$") ~= nil or name:match("%.markdown$") ~= nil or name:match("%.mdx$") ~= nil
+end
+
 function M.toggle()
   if state.server then
     stop_server()
     vim.notify("Markdown preview: stopped")
+    return
+  end
+  local buf = vim.api.nvim_get_current_buf()
+  if not is_markdown(buf) then
+    vim.notify("Markdown preview: current buffer is not Markdown", vim.log.levels.WARN)
     return
   end
   M.open()
