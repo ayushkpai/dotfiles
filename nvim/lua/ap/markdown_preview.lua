@@ -444,6 +444,9 @@ function M.toggle()
 end
 
 function M.setup()
+  vim.api.nvim_create_user_command("MarkdownPreview", M.toggle, {
+    desc = "Toggle GitHub-style Markdown preview",
+  })
   vim.keymap.set("n", "<leader>mp", M.toggle, { desc = "[M]arkdown [P]review toggle" })
   vim.api.nvim_create_autocmd("VimLeavePre", { callback = stop_server })
 end
