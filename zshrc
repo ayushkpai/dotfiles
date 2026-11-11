@@ -124,7 +124,18 @@ alias zshconfig="vim ~/.zshrc"
 alias oc="opencode"
 
 og() {
-  open "http://localhost:$1"
+  local port="$1"
+
+  if [[ -z "$port" ]]; then
+    read "port?Enter port number: "
+  fi
+
+  if [[ -z "$port" ]]; then
+    echo "No port provided. Exiting."
+    return 1
+  fi
+
+  open "http://localhost:$port"
 }
 
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
