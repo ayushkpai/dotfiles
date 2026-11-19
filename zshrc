@@ -11,16 +11,27 @@ for ((i=0; i<${#label}+${#name}+4; i++)); do bar+="─"; done
 printf '\n  ╭%s╮\n  │  ' "$bar"
 stty -echo
 skip=0
+to_src=0
 printf '\033[1m'
 for ((i=1; i<=${#label}; i++)); do
   printf '%s' "${label[$i]}"
-  if read -t 0.03 -k 1 key && [[ $key == [sS] ]]; then skip=1; break; fi
+  if read -t 0.03 -k 1 key; then
+    case $key in
+      ([sS]) skip=1; break ;;
+      ([cC]) skip=1; to_src=1; break ;;
+    esac
+  fi
 done
 if (( ! skip )); then
   printf '\033[38;5;141m'
   for ((i=1; i<=${#name}; i++)); do
     printf '%s' "${name[$i]}"
-    if read -t 0.03 -k 1 key && [[ $key == [sS] ]]; then skip=1; break; fi
+    if read -t 0.03 -k 1 key; then
+      case $key in
+        ([sS]) skip=1; break ;;
+        ([cC]) skip=1; to_src=1; break ;;
+      esac
+    fi
   done
 fi
 stty echo
@@ -30,6 +41,7 @@ else
   printf '\033[0m  │\n'
 fi
 printf '  ╰%s╯\n' "$bar"
+if (( to_src )); then cd ~/src; fi
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
