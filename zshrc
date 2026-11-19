@@ -9,11 +9,26 @@ label="$greeting, "
 bar=""
 for ((i=0; i<${#label}+${#name}+4; i++)); do bar+="─"; done
 printf '\n  ╭%s╮\n  │  ' "$bar"
+stty -echo
+skip=0
 printf '\033[1m'
-for ((i=1; i<=${#label}; i++)); do printf '%s' "${label[$i]}"; sleep 0.03; done
-printf '\033[38;5;141m'
-for ((i=1; i<=${#name}; i++)); do printf '%s' "${name[$i]}"; sleep 0.03; done
-printf '\033[0m  │\n'
+for ((i=1; i<=${#label}; i++)); do
+  printf '%s' "${label[$i]}"
+  if read -t 0.03 -k 1 key && [[ $key == [sS] ]]; then skip=1; break; fi
+done
+if (( ! skip )); then
+  printf '\033[38;5;141m'
+  for ((i=1; i<=${#name}; i++)); do
+    printf '%s' "${name[$i]}"
+    if read -t 0.03 -k 1 key && [[ $key == [sS] ]]; then skip=1; break; fi
+  done
+fi
+stty echo
+if (( skip )); then
+  printf '\r\033[K\033[0m  │  \033[1m%s\033[38;5;141m%s\033[0m  │\n' "$label" "$name"
+else
+  printf '\033[0m  │\n'
+fi
 printf '  ╰%s╯\n' "$bar"
 
 # If you come from bash you might have to change your $PATH.
