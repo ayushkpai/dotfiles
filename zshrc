@@ -16,10 +16,9 @@ printf '\033[1m'
 for ((i=1; i<=${#label}; i++)); do
   printf '%s' "${label[$i]}"
   if read -t 0.03 -k 1 key; then
-    case $key in
-      ([sS]) skip=1; break ;;
-      ([cC]) skip=1; to_src=1; break ;;
-    esac
+    skip=1
+    if [[ $key == [cC] ]]; then to_src=1; fi
+    break
   fi
 done
 if (( ! skip )); then
@@ -27,10 +26,9 @@ if (( ! skip )); then
   for ((i=1; i<=${#name}; i++)); do
     printf '%s' "${name[$i]}"
     if read -t 0.03 -k 1 key; then
-      case $key in
-        ([sS]) skip=1; break ;;
-        ([cC]) skip=1; to_src=1; break ;;
-      esac
+      skip=1
+      if [[ $key == [cC] ]]; then to_src=1; fi
+      break
     fi
   done
 fi
