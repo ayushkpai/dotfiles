@@ -17,7 +17,7 @@ for ((i=1; i<=${#label}; i++)); do
   printf '%s' "${label[$i]}"
   if read -t 0.03 -k 1 key; then
     skip=1
-    if [[ $key == [cC] ]]; then to_src=1; fi
+    if [[ $key == [sS] ]]; then to_src=1; fi
     break
   fi
 done
@@ -27,7 +27,7 @@ if (( ! skip )); then
     printf '%s' "${name[$i]}"
     if read -t 0.03 -k 1 key; then
       skip=1
-      if [[ $key == [cC] ]]; then to_src=1; fi
+      if [[ $key == [sS] ]]; then to_src=1; fi
       break
     fi
   done
