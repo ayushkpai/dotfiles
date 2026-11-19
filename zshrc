@@ -41,6 +41,29 @@ fi
 printf '  ╰%s╯\n' "$bar"
 if (( to_src )); then cd ~/src; fi
 
+typeset -a scene
+case $((RANDOM % 5)) in
+  (0) scene=('   \   /' '    .-.' ' ~~~|~~~~' '~~~~~~~~~~') ;;
+  (1) scene=('     /\' '    /  \' '   /    \' '  /______\') ;;
+  (2) scene=('   \  |  /' '    \ | /' '  ---( )---' '    / | \' '   /  |  \') ;;
+  (3) scene=('   *    .' '      *' ' .     *   .' '    *      .') ;;
+  (4) scene=('     /\' '    /||\' '   /_||_\' '     ||' '     ||') ;;
+esac
+height=${#scene}
+width=0
+for l in "${scene[@]}"; do if (( ${#l} > width )); then width=${#l}; fi; done
+rows=${LINES:-$(tput lines)}
+cols=${COLUMNS:-$(tput cols)}
+if (( rows > height && cols > width )); then
+  r=$(( rows - height + 1 ))
+  c=$(( cols - width + 1 ))
+  printf '\033[s\033[2m'
+  for ((k=1; k<=height; k++)); do
+    printf '\033[%d;%dH%s' $(( r + k - 1 )) "$c" "${scene[k]}"
+  done
+  printf '\033[0m\033[u'
+fi
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
