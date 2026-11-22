@@ -25,13 +25,13 @@
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
   ```
 
-- Zshrc 
+- zshrc 
   
   ```
   ln -s ~/src/dotfiles/zshrc ~/.zshrc
   ```
 
-- Neo Vim config 
+- Neovim config 
   
   ```
   ln -s ~/src/dotfiles/nvim ~/.config/nvim
@@ -75,7 +75,7 @@
   ```
 
 - Rails 
-  
+
   ```
   gem install rails --no-document
   ```
@@ -130,24 +130,24 @@
 
 - Create vscode extension
   - vscode extension generator 
-  
+
     ```
     npm install -g yo generator-code
     ```
   - vscode extension packager 
-    
+
     ```
     npm install -g vsce
     ```
 
   - Create extension 
-    
+
     ```
     yo code
     ```
 
   - Package 
-  
+
     ```
     vsce package
     ```
@@ -180,17 +180,17 @@
 
 - Pygame
   - pyproject.toml 
-  
+
     ```
     requires-python = ">=3.13"
     ```
 
   - .python-version 
-    
+
     ```
     3.13
     ```
-    
+
   - Add pygame
 
     ```
