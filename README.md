@@ -54,7 +54,7 @@
   ```
 
 - GitHub ssh key. Follow the instructions in [GitHub](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
-- GitHub Cli
+- GitHub Cli (gh)
 
   ```
   gh auth login
