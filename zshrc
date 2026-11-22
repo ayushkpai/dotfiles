@@ -199,6 +199,8 @@ eval "$(zoxide init zsh)"
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 export CPPFLAGS="-I/opt/homebrew/opt/openjdk/include"
 
+export PATH="$PATH:$(go env GOPATH)/bin"
+
 source <(fzf --zsh)
 
 export NVM_DIR="$HOME/.nvm"
